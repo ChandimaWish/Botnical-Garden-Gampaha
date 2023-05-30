@@ -1,7 +1,7 @@
 import React ,{useState} from 'react'
 import '../styles/Navbar.css'
 
-import logo from '../assests/logo.png';
+
 import { Link } from 'react-router-dom';
 
 
@@ -29,19 +29,19 @@ function Navbar() {
 
   return (
     <nav className='nav'>
-      <a href="#" className='nav__logo'>GAMPAHA Botanical garden</a>
+       <a href="chandimasanjeewa.com" className='nav__logo'>GAMPAHA Botanical garden</a>
       {/* <img src={logo} className='nav__logo'/> */}
       
       <ul className={active}>
-          <Link to="/"><li className='nav__item'><a href='#' className='nav__link'>HOME</a></li></Link>
-          <Link to="/Herbarium">
-          <li className='nav__item'><a href='#' className='nav__link'>Herbarium</a></li>
-          </Link>
-          <Link to="/Contacts"><li className='nav__item'><a href='#' className='nav__link'>Contacts</a></li></Link>
-          <Link to="/News"><li className='nav__item'><a href='#' className='nav__link'>News</a></li></Link>
-          <Link to="/Gallery"><li className='nav__item'><a href='#' className='nav__link'>Gallery</a></li></Link>
-          <Link to="Services"><li className='nav__item'><a href='#' className='nav__link'>Services</a></li></Link>
-          <Link to="Publication"><li className='nav__item'><a href='#' className='nav__link'>Publication</a></li></Link>
+      <li className='nav__item'><Link to="/">Home</Link></li>
+          
+          <li className='nav__item'><Link to="/Herbarium">Herbarium</Link></li>   
+       
+          <li className='nav__item'><Link to="/Contacts">Contacts</Link></li>
+          <li className='nav__item'><Link to="/News">News</Link></li>
+          <li className='nav__item'><Link to="/Gallery">Gallery</Link></li>
+          <li className='nav__item'><Link to="/Services">Services</Link></li>
+          <li className='nav__item'><Link to="/Publication">Publication</Link></li>
       </ul>
       <div onClick={navToggle}className={toggleIcon}>
         <div className='line1'></div>
